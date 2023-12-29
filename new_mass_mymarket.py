@@ -26,10 +26,10 @@ columns = ['date', 'time', 'retailer', 'product category', 'product sku','produc
 
 df_scraped = pd.DataFrame(columns=columns)
 
-# Local files
+# Local files & folders
 linksfolder = r'C:\SuperMarket prices\links'
-mymarketfile = r'C:\SuperMarket prices\links\mymarket.xlsx'
-export_file = fr'C:\SuperMarket prices\scrapped_results_mymarket_{formatted_date}.xlsx'
+mymarketfile = r'C:\SuperMarket prices\links\mymarket.xlsx' # This is the file (input) which contains the links of product categories for web scrapping
+export_file = fr'C:\SuperMarket prices\scrapped_results_mymarket_{formatted_date}.xlsx' # this is the file (output) of the scrapped products
 
 # Get the current date
 current_date = datetime.now()
