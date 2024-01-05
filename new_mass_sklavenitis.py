@@ -120,12 +120,10 @@ for index, row in df.iterrows():
     
     
     scrapped = pd.DataFrame(data)
-    #df_scraped = df_scraped.append(scrapped, ignore_index=True)
     df_scraped = pd.concat([df_scraped, scrapped], ignore_index=True)
     df_scraped['final price'] = pd.to_numeric(df_scraped['final price'], errors='coerce')
 
 df_scraped.to_excel(writer, index=False)
-#writer.save()
 writer.close()
 
 
